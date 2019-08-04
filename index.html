@@ -13,15 +13,21 @@
 <body>
   <h1>The Decidenator</h1>
 
-  <form action="">
+  <form action="" id="decideForm">
     <div class="question">
       <label for="question" >Type Something You Want Help Deciding</label>
       <input id="question" type="text">
     </div>
-    <div class="pro">
+    <div class="pro" id="pro">
       <label for="pro">Now add Items to the Pro List</label>
       <input id="pro" type="text">
       <label for="proNum">Now give them a numerical value</label>
+      <input type="number" name="number">
+    </div>
+    <div class="pro" id="pro2">
+      <label for="pro2">Now add Items to the Pro List</label>
+      <input id="pro2" type="text">
+      <label for="proNum2">Now give them a numerical value</label>
       <input type="number">
     </div>
     <div class="con">
@@ -30,9 +36,12 @@
       <label for="conNum">Now give them a numerical value</label>
       <input type="number">
     </div>
-    <button>Click to Decide!</button>
+    <button id="decideButton">Click to Decide!</button>
 
   </form>
+  <div class="answer" id="answer">
+
+  </div>
 
 <script src="scripts.js"></script>
 </body>
