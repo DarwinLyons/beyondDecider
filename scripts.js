@@ -11,14 +11,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 //init function
 
 const init = () => {
-  listenClick()
+  answerClick()
+  proClick()
   // addFields();
 
 }
 
+//global variables 
+
+// const getById = id => {
+//   document.getElementById(id)
+// }
+
 //event click listener
 
-const listenClick = () => {
+const answerClick = () => {
   document.getElementById("decideButton").addEventListener("click", function (event) {
   preventDefault()
   getPro()
@@ -41,33 +48,29 @@ const revealAnswer = () => {
 //tally the numbers in the pro column
 
 const getPro = () => {
-  const proNum = document.getElementById('proNum').value
-  console.log('proNum')
+  const number = document.getElementById('proNum').value
+  console.log(number)
 }
 
 
 //add inputs to the form when the user hits enter on pro
 
-// 
+//event listener for pro column
 
-// function addFields() {
-//   // Number of inputs to create
-//   const number = document.getElementById("pro").value;
-//   // Container <div> where dynamic content will be placed
-//   var container = document.getElementById("decideForm");
- 
-//   for (i = 0; i < number; i++) {
-//     // Append a node with a random text
-//     decideForm.appendChild(document.createTextNode("Member " + (i + 1)));
-//     // Create an <input> element, set its type and name attributes
-//     const input = document.createElement("input");
-//     input.type = "text";
-//     input.name = "member" + i;
-//     container.appendChild(input);
-//     // Append a line break 
-//     container.appendChild(document.createElement("br"));
-//   }
-// }
+const proClick = () => {
+  document.getElementById('addPro').addEventListener("click", function (event) {
+    preventDefault()
+    addProDiv()
+  });
+}
+
+const addProDiv = () => {
+  const newDiv = document.createElement("div");
+  const currentDiv = document.getElementById("pro");
+  const parentDiv = document.getElementById("decideForm");
+  parentDiv.insertBefore(newDiv, currentDiv); 
+  newDiv.id = "pro3";
+}
 
 //add inputs to the form when the user hits enter on con
 //tally pro numbers on click
