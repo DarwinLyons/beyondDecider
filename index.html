@@ -18,24 +18,24 @@
       <label for="question" >Type Something You Want Help Deciding</label>
       <input id="question" type="text">
     </div>
-    <div class="pro" id="pro">
-      <label for="pro">Now add Items to the Pro List</label>
-      <input id="pro" type="text">
-      <label for="proNum">Now give them a numerical value</label>
-      <input type="number" name="number" id="proNum">
+    <div id="proContainer">
+      <div class="pro" id="pro">
+        <label for="proText">Add an items to the Pro List</label>
+        <input id="proText" type="text">
+        <label for="proNum">Give that item a numerical value</label>
+        <input type="number" name="number" id="proNum" class="proNum">
+      </div>
       <button id="addPro">Add another Pro</button>
     </div>
-    <div class="pro" id="pro2">
-      <label for="pro2">Now add Items to the Pro List</label>
-      <input id="pro2" type="text">
-      <label for="proNum2">Now give them a numerical value</label>
-      <input type="number">
-    </div>
-    <div class="con">
-      <label for="con">Now add Items to the con List</label>
-      <input id="con" type="text">
-      <label for="conNum">Now give them a numerical value</label>
-      <input type="number">
+    
+    <div id="conContainer">
+      <div class="con" id="con">
+        <label for="conText">Add an item to the con list</label>
+        <input id="con" type="text">
+        <label for="conNum">Give that item a numerical value</label>
+        <input type="number" id="conNum" class="conNum">
+      </div>
+    <button id="addCon">Add another Con</button>
     </div>
     <button id="decideButton">Click to Decide!</button>
 
